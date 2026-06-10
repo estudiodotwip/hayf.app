@@ -1,3 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Are You Feeling?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #FFE94A; }
+    .pw-wrap { font-family: 'Press Start 2P', monospace; background: #FFE94A; padding: 2rem 1.5rem; text-align: center; }
+    .pw-title { font-size: 13px; color: #000; line-height: 1.9; margin-bottom: 1.5rem; }
+    .pw-faces { display: flex; justify-content: center; gap: 18px; margin-bottom: 1.5rem; flex-wrap: nowrap; }
+    .pw-face { cursor: pointer; transition: transform 0.1s; outline: none; background: none; border: none; padding: 0; }
+    .pw-face:hover { transform: scale(1.12); }
+    .pw-face:active { transform: scale(0.93); }
+    .pw-face svg rect { shape-rendering: crispEdges; }
+    .pw-label { font-size: 7px; color: #000; margin-top: 6px; display: block; }
+    .pw-msg { font-size: 8px; color: #000; line-height: 2; opacity: 0; transition: opacity 0.35s; text-align: center; min-height: 2em; }
+    .pw-msg.show { opacity: 1; }
+  </style>
+</head>
+<body>
 <div class="pw-wrap">
   <div class="pw-title">HOW ARE<br>YOU FEELING????</div>
   <div class="pw-faces">
@@ -64,3 +88,5 @@ function showMsg(mood) {
   setTimeout(function() { el.textContent = pool[i]; el.classList.add('show'); }, 200);
 }
 </script>
+</body>
+</html>
